@@ -5,5 +5,5 @@ The purpose of this repo is to provide minimal setup to start an Electron develo
 ## To use
 
 ```
-npm start
+npm install && npm start
 ```
