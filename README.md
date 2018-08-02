@@ -5,17 +5,20 @@ The purpose of this repo is to provide minimal setup to start an Electron develo
 ## To use
 
 ```
-npm install && npm start
+$ npm install
+$ npm run build
+$ npm start
 ```
 
 ## To use (in WSL)
 
 First install all the dependencies from Command Prompt using below command:
 ```
-npm install
+$ npm install
 ```
 
 And then do below command in WSL:
 ```
-npm start
+$ npm run build
+$ npm start
 ```
