@@ -1,23 +1,30 @@
 {
-  "name": "electron-with-react",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "concurrently": "^3.6.1",
-    "electron-is-dev": "^0.3.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-scripts": "1.1.4",
-    "wait-on": "^2.1.0"
-  },
-  "devDependencies": {
-    "electron": "^2.0.6"
-  },
-  "main": "public/main.js",
-  "scripts": {
-    "start": "concurrently \"BROWSER=none react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "name": "electron-with-react",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "concurrently": "^3.6.1",
+        "electron-is-dev": "^0.3.0",
+        "html-webpack-plugin": "^3.2.0",
+        "react": "^16.4.2",
+        "react-dom": "^16.4.2",
+        "wait-on": "^2.1.0"
+    },
+    "devDependencies": {
+        "babel-core": "^6.2.1",
+        "babel-loader": "^7.1.5",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "css-loader": "^1.0.0",
+        "electron": "^2.0.6",
+        "file-loader": "^1.1.11",
+        "style-loader": "^0.21.0",
+        "webpack": "^4.16.4",
+        "webpack-cli": "^3.1.0"
+    },
+    "main": "public/main.js",
+    "scripts": {
+        "build": "webpack --config webpack.config.js",
+        "start": "electron ."
+    }
 }
