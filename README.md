@@ -5,9 +5,7 @@ The purpose of this repo is to provide minimal setup to start an Electron develo
 ## To use
 
 ```
-$ npm install
-$ npm run build
-$ npm start
+$ npm install && npm start
 ```
 
 ## To use (in WSL)
@@ -19,6 +17,5 @@ $ npm install
 
 And then do below command in WSL:
 ```
-$ npm run build
 $ npm start
 ```
