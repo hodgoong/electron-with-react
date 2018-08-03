@@ -1,30 +1,37 @@
 {
-    "name": "electron-with-react",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "concurrently": "^3.6.1",
-        "electron-is-dev": "^0.3.0",
-        "html-webpack-plugin": "^3.2.0",
-        "react": "^16.4.2",
-        "react-dom": "^16.4.2",
-        "wait-on": "^2.1.0"
-    },
-    "devDependencies": {
-        "babel-core": "^6.2.1",
-        "babel-loader": "^7.1.5",
-        "babel-preset-es2015": "^6.24.1",
-        "babel-preset-react": "^6.24.1",
-        "css-loader": "^1.0.0",
-        "electron": "^2.0.6",
-        "file-loader": "^1.1.11",
-        "style-loader": "^0.21.0",
-        "webpack": "^4.16.4",
-        "webpack-cli": "^3.1.0"
-    },
-    "main": "public/main.js",
+    "name": "babel-setup",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
     "scripts": {
         "build": "webpack --config webpack.config.js",
-        "start": "electron ."
+        "start": "concurrently --kill-others \"npm run lint:watch\" \"babel-node ./devServer/devServer.js\"",
+        "lint": "esw webpack.config.js src devServer",
+        "lint:watch": "npm run lint -- --watch"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.5",
+        "babel-preset-latest": "^6.24.1",
+        "concurrently": "^3.6.1",
+        "css-loader": "^1.0.0",
+        "eslint": "^5.2.0",
+        "eslint-plugin-import": "^2.13.0",
+        "eslint-watch": "^4.0.2",
+        "express": "^4.16.3",
+        "file-loader": "^1.1.11",
+        "html-webpack-plugin": "^3.2.0",
+        "npm-run-all": "^4.1.3",
+        "open": "0.0.5",
+        "style-loader": "^0.21.0",
+        "webpack": "^4.16.4",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-middleware": "^3.1.3"
+    },
+    "dependencies": {
+        "numeral": "^2.0.6"
     }
 }

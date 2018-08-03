@@ -1,12 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import numeral from 'numeral';
 
-ReactDOM.render(
-    <App />,
-    document.getElementById('root')
-);
+const courseValue = numeral(1000).format('$0,0.00');
 
-registerServiceWorker();
+console.log(`I would pay ${courseValue} for this awesome course!22`); // eslint-disable-line no-console

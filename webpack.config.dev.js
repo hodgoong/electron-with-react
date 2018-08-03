@@ -7,13 +7,14 @@ const htmlPlugin = new HtmlWebPackPlugin({
   });
 
 module.exports = {
-    mode: "production",
+    devtool: 'inline-source-map',
+    mode: "development",
     entry: [
         path.resolve(__dirname, 'src/index')
     ],
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, './dist')
+        path: path.resolve(__dirname, './src')
     },
     target: 'web',
     module: {
