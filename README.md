@@ -19,3 +19,8 @@ And then do below command in WSL:
 ```
 npm start
 ```
+
+## To view in web browser
+```
+npm run web
+```

@@ -14,9 +14,9 @@ module.exports = {
     ],
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, './src')
+        path: path.resolve(__dirname, './dist_dev')
     },
-    target: 'web',
+    target: 'electron-main',
     module: {
         rules: [
             {
@@ -26,7 +26,7 @@ module.exports = {
                     {
                         loader: 'babel-loader',
                         options: {
-                            "presets": ['es2015']
+                            "presets": ['es2015', 'react']
                         }
                     }
                 ],
