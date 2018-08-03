@@ -2,11 +2,12 @@
     "name": "babel-setup",
     "version": "1.0.0",
     "description": "",
-    "main": "dist/dev/main.js",
+    "main": "dist/app/main.js",
     "scripts": {
-        "build": "node script/build.prod.js && webpack --config webpack.config.js",
+        "build": "node script/build.prod.js && webpack --config webpack.config.js --optimize-minimize --optimize-dedupe",
         "build:dev": "node script/build.dev.js && webpack --config webpack.config.dev.js",
-        "web": "babel-node server.js",
+        "web": "npm run build && node script/server.prod.js",
+        "web:dev": "babel-node script/server.dev.js",
         "lint": "esw webpack.config.js src",
         "lint:watch": "npm run lint -- --watch",
         "start": "npm run build:dev && electron ."

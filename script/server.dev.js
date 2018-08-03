@@ -1,8 +1,8 @@
-import express from 'express';
-import path from 'path';
-import opn from 'opn';
-import webpack from 'webpack';
-import config from './webpack.config.dev';
+const express = require('express');
+const path = require('path');
+const opn = require('opn');
+const webpack = require('webpack');
+const config = require('../webpack.config.dev');
 
 /* eslint-disable no-console */
 
