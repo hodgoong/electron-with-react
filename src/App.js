@@ -5,22 +5,21 @@ import angularLogo from './assets/images/angular.logo.png';
 import reactLogo from './assets/images/react.logo.png';
 import vuejsLogo from './assets/images/vue.logo.png';
 
-
 class App extends Component {
     constructor(props) {
         super(props);
         this.store = this.props.store;
     }
 
-    handleVoteAngular(){
+    handleVoteAngular = () => {
         this.store.dispatch(voteAngular());
     }
 
-    handleVoteReact(){
+    handleVoteReact = () => {
         this.store.dispatch(voteReact());
     }
 
-    handleVoteVuejs() {
+    handleVoteVuejs = () => {
         this.store.dispatch(voteVuejs());
     }
 
@@ -32,14 +31,15 @@ class App extends Component {
                     <h4>Click on the logos below to vote</h4>
                     <br />
                     <div className="row">
-                        <div className="col-xs-offset-3 col-xs-2">
+                        <div className="col-md-3"></div>
+                        <div className="col-md-2">
                             <img src={angularLogo} height="96" onClick={this.handleVoteAngular}></img>
                         </div>
-                        <div className="col-xs-offset-3 col-xs-2">
-                            <img src={reactLogo} height="96" onClick={this.handleVoteAngular}></img>
+                        <div className="col-md-2">
+                            <img src={reactLogo} height="96" onClick={this.handleVoteReact}></img>
                         </div>
-                        <div className="col-xs-offset-3 col-xs-2">
-                            <img src={vuejsLogo} height="96" onClick={this.handleVoteAngular}></img>
+                        <div className="col-md-2">
+                            <img src={vuejsLogo} height="96" onClick={this.handleVoteVuejs}></img>
                         </div>
                     </div>
                 </div>

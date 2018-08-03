@@ -4,7 +4,7 @@ export const voteReact = () => {
     }
 }
 
-export const voetAngular = () => {
+export const voteAngular = () => {
     return {
         type: 'VOTE_ANGULAR'
     }
